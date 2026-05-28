@@ -108,9 +108,9 @@ Planned artifacts:
 
 ## Near-Term Work
 
-1. Add stricter context-pack schema.
-2. Add profile manifest schema.
-3. Add benchmark runner output files.
-4. Add negative fixtures.
-5. Add publication index after public preprint status is confirmed.
-6. Prepare first public alpha commit and tag.
+1. Map practical `$graph` capabilities to public GrowGraph standard sections.
+2. Add stricter context-pack schema.
+3. Add profile manifest schema.
+4. Draft graph seed and graph embryo public methods.
+5. Add benchmark runner output files and negative fixtures.
+6. Add publication index after public preprint status is confirmed.

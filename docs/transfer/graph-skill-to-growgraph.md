@@ -1,0 +1,117 @@
+# From `$graph` Skill To GrowGraph
+
+Status: initial transfer map
+
+## Purpose
+
+This note defines how reusable knowledge from the practical `$graph` skill
+should move into the public GrowGraph repository.
+
+## Transfer Rule
+
+`$graph` is the practical methodology owner. GrowGraph is the public standard
+and adoption layer.
+
+Transfer a concept only when it is:
+
+- reusable outside the original skill;
+- safe for public release;
+- not tied to private SIMAI or customer material;
+- useful for standards, tooling, profiles, examples or research evidence.
+
+## Transfer Classes
+
+### Standard Concept
+
+Belongs in:
+
+- `standard/`
+- `schemas/`
+
+Examples:
+
+- object model;
+- relation model;
+- lifecycle/readiness;
+- evidence/provenance;
+- governance gates;
+- conformance levels.
+
+### Profile Concept
+
+Belongs in:
+
+- `standard/profiles.md`
+- future `profiles/`
+
+Examples:
+
+- software specification profile;
+- project management profile;
+- organization governance profile;
+- research program profile.
+
+### Reference Tooling
+
+Belongs in:
+
+- `packages/`
+- `schemas/`
+- `examples/`
+
+Examples:
+
+- validators;
+- generators;
+- benchmark runners;
+- migration helpers.
+
+### Research Artifact
+
+Belongs in:
+
+- `benchmarks/`
+- `publications/`
+- `docs/research/`
+
+Examples:
+
+- experiment protocol;
+- result note;
+- reproducibility package;
+- validation roadmap.
+
+### Private Or Local Material
+
+Does not belong in public GrowGraph.
+
+Examples:
+
+- raw internal project materials;
+- internal chats;
+- private skill implementation details not approved for release;
+- customer or employee data;
+- secrets;
+- private metrics without redaction and approval.
+
+## Initial Mapping
+
+| `$graph` Area | GrowGraph Destination | Notes |
+| --- | --- | --- |
+| Graph Seed | `standard/`, `docs/adoption/` | Should become a public seed method. |
+| Graph Embryo | `standard/`, `docs/adoption/` | Useful for staged graph growth. |
+| Lifecycle/readiness | `standard/lifecycle-readiness.md` | Already started. |
+| Relation/impact model | `standard/relation-model.md` | Needs richer impact semantics. |
+| AI context generation | `standard/context-pack-generation.md` | Needs schema and generator. |
+| Measure-convert-optimize | `docs/research/`, `benchmarks/` | Core validation methodology. |
+| Graph method evolution | `docs/research/` | Core practice-to-science loop. |
+| Federation contracts | future `standard/federation.md` | Later stage. |
+| Runtime policies | future `standard/governance.md` expansion | Public-safe subset only. |
+
+## Next Transfer Batch
+
+1. Create context-pack schema.
+2. Create profile manifest schema.
+3. Draft graph seed and graph embryo public method.
+4. Draft measure-convert-optimize experiment protocol.
+5. Add a standard gap report comparing public GrowGraph to practical `$graph`.

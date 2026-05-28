@@ -65,6 +65,7 @@ publications/ Publication links, citation notes and reproducibility records.
 - [Concept](docs/concept.md)
 - [Terminology](docs/terminology.md)
 - [Getting Started](docs/adoption/getting-started.md)
+- [Practice And Science Program](docs/research/practice-science-program.md)
 - [Standard v0.1 Draft](standard/standard-v0.1.md)
 - [Conformance Levels](standard/conformance-levels.md)
 - [Test Suite](standard/test-suite.md)

@@ -31,6 +31,8 @@ All notable changes to GrowGraph will be documented in this file.
 - Synthetic context-reduction benchmark.
 - Initial adoption guide.
 - Contribution guide.
+- Practice-and-science program note.
+- Initial `$graph` skill to GrowGraph transfer map.
 
 ### Validation
 
