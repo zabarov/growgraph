@@ -4,6 +4,8 @@ All notable changes to GrowGraph will be documented in this file.
 
 ## [Unreleased]
 
+## [0.1.0-alpha.3] - 2026-05-28
+
 ### Added
 
 - Independent implementation pilot 002 for a synthetic software specification
@@ -29,6 +31,21 @@ All notable changes to GrowGraph will be documented in this file.
   types.
 - Semantic review of pilot 002 led to the first safety-context inclusion rule
   for context-pack generation.
+
+### Validation
+
+- `npm run release:check` validates examples, benchmark package, seed, profiles,
+  public pilots, context-pack generation, readiness scoring, synthetic
+  benchmark calculation and negative fixtures.
+- Semantic-completeness review artifacts record `pass_with_notes` verdicts for
+  the synthetic benchmark and software-specification pilot context packs.
+
+### Limitations
+
+- Evidence remains synthetic and public-safe.
+- Context-pack selection still lacks per-object explanations and relevance
+  scores.
+- Semantic reviews are maintained artifacts, not automated reviewer consensus.
 
 ## [0.1.0-alpha.2] - 2026-05-28
 
