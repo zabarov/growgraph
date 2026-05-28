@@ -46,7 +46,7 @@
     {
       "name": "omission_transparency",
       "score": 2,
-      "note": "Omitted package, security constraint and credential-leak risk objects are listed."
+      "note": "The omitted package wrapper is listed."
     },
     {
       "name": "no_private_or_unsafe_leakage",
@@ -75,7 +75,7 @@
   "limitations": [
     "The review is performed on a synthetic pilot package.",
     "The review does not measure downstream implementation quality.",
-    "The context-pack generator does not yet include per-object selection explanations or relevance scores."
+    "Selection scores are heuristic and do not prove semantic completeness."
   ],
   "claim_supported": "The generated context pack preserved task-relevant meaning with safety-sensitive context included."
 }

@@ -66,18 +66,13 @@
       "object_id": "pkg.identity_access",
       "impact": "low",
       "note": "The scoped API token feature and source evidence are included, so the omitted package wrapper does not block this task."
-    },
-    {
-      "object_id": "pkg.content_workflow",
-      "impact": "low",
-      "note": "The workflow transition feature and source evidence are included, so the omitted package wrapper does not block this task."
     }
   ],
   "limitations": [
     "The review is performed on a synthetic package.",
     "The review does not measure downstream implementation quality.",
     "The package does not yet model governance gates as graph objects.",
-    "The context-pack generator does not yet include per-object selection explanations or relevance scores."
+    "Selection scores are heuristic and do not prove semantic completeness."
   ],
   "claim_supported": "The generated context pack preserved task-relevant meaning under this review protocol."
 }

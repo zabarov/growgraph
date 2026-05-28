@@ -109,7 +109,6 @@ Planned artifacts:
 ## Near-Term Work
 
 1. Map practical `$graph` capabilities to public GrowGraph standard sections.
-2. Add context-pack relevance scoring and selection explanations.
-3. Add context-pack metadata/schema validation.
-4. Add positive profile conformance fixture result artifacts.
-5. Prepare v0.1.0-alpha.4 scope.
+2. Add context-pack metadata/schema validation.
+3. Add positive profile conformance fixture result artifacts.
+4. Prepare v0.1.0-alpha.4 scope.

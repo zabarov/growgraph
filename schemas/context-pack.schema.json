@@ -49,6 +49,59 @@
         "type": "string"
       }
     },
+    "selection": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "method": {
+          "type": "string"
+        },
+        "task_tokens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "object_explanations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "relevance_score", "reasons"],
+            "additionalProperties": true,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "relevance_score": {
+                "type": "number"
+              },
+              "reasons": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "relation_explanations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "reason"],
+            "additionalProperties": true,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
     "assumptions": {
       "type": "array",
       "items": {

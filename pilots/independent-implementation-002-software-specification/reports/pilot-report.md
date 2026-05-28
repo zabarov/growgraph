@@ -70,6 +70,8 @@ Package summary:
 - A direct task-to-requirement relation improved traceability and made the
   generated task context more useful.
 - Semantic review made safety-context omissions explicit.
+- Context-pack selection explanations now show relevance scores and inclusion
+  reasons for selected objects and relations.
 - Readiness scoring correctly capped the result because evidence is synthetic
   and benchmark evidence is missing for this pilot.
 

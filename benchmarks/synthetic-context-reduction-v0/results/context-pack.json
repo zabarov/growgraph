@@ -2,12 +2,13 @@
   "id": "context_pack.task_notify_after_approval",
   "task_id": "task.notify_after_approval",
   "source_graph": "package.synthetic_context_reduction_v0",
-  "generated_at": "2026-05-28T18:49:52.486Z",
+  "generated_at": "2026-05-28T19:46:09.373Z",
   "included_objects": [
     "source.identity_access",
     "source.content_workflow",
     "source.audit_events",
     "source.notification_delivery",
+    "pkg.content_workflow",
     "pkg.audit_events",
     "pkg.notification_delivery",
     "feature.workflow_transition",
@@ -16,6 +17,7 @@
     "risk.duplicate_notifications"
   ],
   "included_relations": [
+    "relation.pkg.content_workflow.implements.feature.workflow_transition",
     "relation.pkg.notification_delivery.depends_on.feature.scoped_api_token",
     "relation.pkg.audit_events.evidences.feature.workflow_transition",
     "relation.pkg.notification_delivery.blocks.constraint.audit_before_notify",
@@ -24,18 +26,153 @@
     "relation.pkg.notification_delivery.related_to.risk.duplicate_notifications"
   ],
   "evidence": [
+    "source.content_workflow",
     "source.audit_events",
     "source.notification_delivery",
-    "source.content_workflow",
     "source.identity_access"
   ],
+  "selection": {
+    "method": "token_matching_one_hop_relation_expansion_safety_shared_evidence",
+    "task_tokens": [
+      "task",
+      "notify",
+      "after",
+      "approve"
+    ],
+    "object_explanations": [
+      {
+        "id": "source.identity_access",
+        "relevance_score": -1,
+        "reasons": [
+          "evidence referenced by selected object"
+        ]
+      },
+      {
+        "id": "source.content_workflow",
+        "relevance_score": 2,
+        "reasons": [
+          "exact token match: approve",
+          "evidence object penalty until linked by selected graph context"
+        ]
+      },
+      {
+        "id": "source.audit_events",
+        "relevance_score": -1,
+        "reasons": [
+          "evidence referenced by selected object"
+        ]
+      },
+      {
+        "id": "source.notification_delivery",
+        "relevance_score": 2,
+        "reasons": [
+          "exact token match: notify",
+          "evidence object penalty until linked by selected graph context"
+        ]
+      },
+      {
+        "id": "pkg.content_workflow",
+        "relevance_score": 3,
+        "reasons": [
+          "exact token match: approve"
+        ]
+      },
+      {
+        "id": "pkg.audit_events",
+        "relevance_score": 0,
+        "reasons": [
+          "one-hop relation expansion from relation.constraint.audit_before_notify.depends_on.pkg.audit_events"
+        ]
+      },
+      {
+        "id": "pkg.notification_delivery",
+        "relevance_score": 6,
+        "reasons": [
+          "exact token match: notify",
+          "exact token match: after"
+        ]
+      },
+      {
+        "id": "feature.workflow_transition",
+        "relevance_score": 0,
+        "reasons": [
+          "one-hop relation expansion from relation.pkg.content_workflow.implements.feature.workflow_transition"
+        ]
+      },
+      {
+        "id": "feature.scoped_api_token",
+        "relevance_score": 0,
+        "reasons": [
+          "one-hop relation expansion from relation.pkg.notification_delivery.depends_on.feature.scoped_api_token"
+        ]
+      },
+      {
+        "id": "constraint.audit_before_notify",
+        "relevance_score": 6,
+        "reasons": [
+          "exact token match: notify",
+          "exact token match: approve"
+        ]
+      },
+      {
+        "id": "risk.duplicate_notifications",
+        "relevance_score": 3,
+        "reasons": [
+          "exact token match: notify"
+        ]
+      }
+    ],
+    "relation_explanations": [
+      {
+        "id": "relation.pkg.content_workflow.implements.feature.workflow_transition",
+        "reason": "one-hop relation expansion from direct object match",
+        "source": "pkg.content_workflow",
+        "target": "feature.workflow_transition"
+      },
+      {
+        "id": "relation.pkg.notification_delivery.depends_on.feature.scoped_api_token",
+        "reason": "one-hop relation expansion from direct object match",
+        "source": "pkg.notification_delivery",
+        "target": "feature.scoped_api_token"
+      },
+      {
+        "id": "relation.pkg.audit_events.evidences.feature.workflow_transition",
+        "reason": "connects selected objects after safety/evidence expansion",
+        "source": "pkg.audit_events",
+        "target": "feature.workflow_transition"
+      },
+      {
+        "id": "relation.pkg.notification_delivery.blocks.constraint.audit_before_notify",
+        "reason": "one-hop relation expansion from direct object match",
+        "source": "pkg.notification_delivery",
+        "target": "constraint.audit_before_notify"
+      },
+      {
+        "id": "relation.constraint.audit_before_notify.depends_on.pkg.audit_events",
+        "reason": "one-hop relation expansion from direct object match",
+        "source": "constraint.audit_before_notify",
+        "target": "pkg.audit_events"
+      },
+      {
+        "id": "relation.feature.workflow_transition.generates.pkg.notification_delivery",
+        "reason": "one-hop relation expansion from direct object match",
+        "source": "feature.workflow_transition",
+        "target": "pkg.notification_delivery"
+      },
+      {
+        "id": "relation.pkg.notification_delivery.related_to.risk.duplicate_notifications",
+        "reason": "one-hop relation expansion from direct object match",
+        "source": "pkg.notification_delivery",
+        "target": "risk.duplicate_notifications"
+      }
+    ]
+  },
   "assumptions": [
     "Alpha generator uses token matching plus one-hop relation expansion.",
     "Safety-sensitive constraints and risks with shared evidence are included."
   ],
   "omissions": [
-    "pkg.identity_access",
-    "pkg.content_workflow"
+    "pkg.identity_access"
   ],
   "limitations": [
     "Generated context pack is not canonical state.",

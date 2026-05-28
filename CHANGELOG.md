@@ -4,6 +4,15 @@ All notable changes to GrowGraph will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+- Context-pack selection explanations with object relevance scores and relation
+  inclusion reasons.
+
+### Changed
+
+- Context-pack schema and standard now describe selection explanation metadata.
+
 ## [0.1.0-alpha.3] - 2026-05-28
 
 ### Added
