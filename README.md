@@ -76,6 +76,7 @@ publications/ Publication links, citation notes and reproducibility records.
 - [Benchmark Result](benchmarks/synthetic-context-reduction-v0/RESULT.md)
 - [Minimal Graph Example](examples/minimal-graph/README.md)
 - [Independent Implementation Pilot 001](pilots/independent-implementation-001-conference-planning/reports/pilot-report.md)
+- [Independent Implementation Pilot 002](pilots/independent-implementation-002-software-specification/reports/pilot-report.md)
 - [Profiles](profiles/README.md)
 
 ## Validate A Graph Package

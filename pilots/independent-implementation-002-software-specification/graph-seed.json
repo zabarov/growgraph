@@ -1,0 +1,72 @@
+{
+  "schema_version": "0.1.0",
+  "seed_id": "seed.notification_api_spec",
+  "target_graph_id": "graph.notification_api_spec",
+  "purpose": "Create a GrowGraph package for a small software specification workflow.",
+  "target_profile": "profile.software_specification",
+  "target_mode": "pilot",
+  "graph_dna": {
+    "purpose": "Keep package scope, features, requirements, constraints, risks and implementation tasks connected.",
+    "evolution_vector": "Grow from a small API specification map into a reviewed software delivery graph.",
+    "non_negotiable_principles": [
+      "The package must remain synthetic and public-safe.",
+      "Implementation tasks must remain traceable to requirements and constraints.",
+      "Public release claims require explicit public-safety review."
+    ]
+  },
+  "source_boundaries": {
+    "allowed_sources": [
+      "synthetic notification API brief",
+      "synthetic engineering notes"
+    ],
+    "excluded_sources": [
+      "real customer requirements",
+      "private repository issues",
+      "production incident logs",
+      "secrets or credentials"
+    ],
+    "canonical_write_allowed": false
+  },
+  "growth_rules": {
+    "allowed_object_families": [
+      "package",
+      "feature",
+      "requirement",
+      "constraint",
+      "risk",
+      "component",
+      "task",
+      "decision",
+      "evidence"
+    ],
+    "allowed_relation_families": [
+      "implements",
+      "depends_on",
+      "blocks",
+      "evidences",
+      "generates",
+      "related_to",
+      "supersedes"
+    ],
+    "max_initial_objects": 14,
+    "depth_mode": "light"
+  },
+  "review_gates": [
+    "human_review_before_canonical_write",
+    "public_safety_before_release",
+    "requirement_traceability_before_implementation"
+  ],
+  "generated_views": [
+    "seed_summary",
+    "candidate_object_list",
+    "traceability_view",
+    "risk_view",
+    "next_action_view"
+  ],
+  "stop_conditions": [
+    "real_customer_data_requested",
+    "implementation_requested_without_requirement_traceability",
+    "secret_or_credential_detected",
+    "candidate_count_exceeds_budget"
+  ]
+}

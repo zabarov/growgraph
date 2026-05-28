@@ -1,0 +1,22 @@
+[
+  {
+    "id": "gate_result.notification_api.public_safety",
+    "gate_id": "gate.public_safety",
+    "target_id": "package.notification_api_spec_pilot_002",
+    "verdict": "pass",
+    "summary": "The pilot uses synthetic public-safe software specification material only.",
+    "evidence": ["source.notification_api_brief"],
+    "reviewed_at": "2026-05-28",
+    "reviewer": "GrowGraph maintainers"
+  },
+  {
+    "id": "gate_result.notification_api.requirement_traceability",
+    "gate_id": "gate.requirement_traceability",
+    "target_id": "task.implement_retry_policy",
+    "verdict": "pass_with_notes",
+    "summary": "The implementation task traces to a feature and requirement, but acceptance criteria are not modeled yet.",
+    "evidence": ["source.notification_api_brief"],
+    "reviewed_at": "2026-05-28",
+    "reviewer": "GrowGraph maintainers"
+  }
+]

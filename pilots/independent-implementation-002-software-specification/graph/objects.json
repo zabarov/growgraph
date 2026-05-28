@@ -1,0 +1,101 @@
+[
+  {
+    "id": "source.notification_api_brief",
+    "kind": "evidence",
+    "title": "Synthetic notification API brief",
+    "summary": "A public-safe synthetic brief for a team notification API.",
+    "readiness": "accepted",
+    "evidence": [],
+    "profile": "software_specification"
+  },
+  {
+    "id": "package.team_notification_api",
+    "kind": "package",
+    "title": "Team Notification API",
+    "summary": "A small synthetic API package for sending team notifications.",
+    "readiness": "review_ready",
+    "evidence": ["source.notification_api_brief"],
+    "profile": "software_specification"
+  },
+  {
+    "id": "requirement.notify_after_event",
+    "kind": "requirement",
+    "title": "Notify after event",
+    "summary": "The system must send a notification after an approved event is recorded.",
+    "readiness": "review_ready",
+    "evidence": ["source.notification_api_brief"],
+    "profile": "software_specification"
+  },
+  {
+    "id": "feature.webhook_delivery",
+    "kind": "feature",
+    "title": "Webhook delivery",
+    "summary": "Deliver notifications to a configured webhook endpoint.",
+    "readiness": "review_ready",
+    "evidence": ["source.notification_api_brief"],
+    "profile": "software_specification"
+  },
+  {
+    "id": "feature.retry_policy",
+    "kind": "feature",
+    "title": "Retry policy",
+    "summary": "Retry failed webhook deliveries with a bounded retry policy.",
+    "readiness": "review_ready",
+    "evidence": ["source.notification_api_brief"],
+    "profile": "software_specification"
+  },
+  {
+    "id": "component.delivery_worker",
+    "kind": "component",
+    "title": "Delivery worker",
+    "summary": "Background worker responsible for webhook delivery attempts.",
+    "readiness": "draft",
+    "evidence": ["source.notification_api_brief"],
+    "profile": "software_specification"
+  },
+  {
+    "id": "constraint.no_secret_logging",
+    "kind": "constraint",
+    "title": "No secret logging",
+    "summary": "Webhook credentials and request secrets must not be logged.",
+    "readiness": "accepted",
+    "evidence": ["source.notification_api_brief"],
+    "profile": "software_specification"
+  },
+  {
+    "id": "risk.duplicate_delivery",
+    "kind": "risk",
+    "title": "Duplicate delivery",
+    "summary": "Retries may deliver the same notification more than once.",
+    "readiness": "review_ready",
+    "evidence": ["source.notification_api_brief"],
+    "profile": "software_specification"
+  },
+  {
+    "id": "risk.credential_leak",
+    "kind": "risk",
+    "title": "Credential leak",
+    "summary": "Webhook credentials may leak through logs or error messages.",
+    "readiness": "review_ready",
+    "evidence": ["source.notification_api_brief"],
+    "profile": "software_specification"
+  },
+  {
+    "id": "decision.idempotency_key_required",
+    "kind": "decision",
+    "title": "Idempotency key required",
+    "summary": "Delivery requests should include an idempotency key to reduce duplicate side effects.",
+    "readiness": "draft",
+    "evidence": ["source.notification_api_brief"],
+    "profile": "software_specification"
+  },
+  {
+    "id": "task.implement_retry_policy",
+    "kind": "task",
+    "title": "Implement retry policy",
+    "summary": "Implement bounded retries in the delivery worker.",
+    "readiness": "review_ready",
+    "evidence": ["source.notification_api_brief"],
+    "profile": "software_specification"
+  }
+]

@@ -1,0 +1,90 @@
+{
+  "schema_version": "0.1.0",
+  "embryo_id": "embryo.notification_api_spec",
+  "seed_id": "seed.notification_api_spec",
+  "generated_at": "2026-05-28T18:22:20.166Z",
+  "candidate_objects": [
+    {
+      "id": "package.candidate_1",
+      "kind": "package",
+      "title": "Candidate Package",
+      "summary": "Candidate package object proposed from seed seed.notification_api_spec.",
+      "readiness": "draft",
+      "evidence": [],
+      "profile": "software_specification"
+    },
+    {
+      "id": "feature.candidate_2",
+      "kind": "feature",
+      "title": "Candidate Feature",
+      "summary": "Candidate feature object proposed from seed seed.notification_api_spec.",
+      "readiness": "draft",
+      "evidence": [],
+      "profile": "software_specification"
+    },
+    {
+      "id": "requirement.candidate_3",
+      "kind": "requirement",
+      "title": "Candidate Requirement",
+      "summary": "Candidate requirement object proposed from seed seed.notification_api_spec.",
+      "readiness": "draft",
+      "evidence": [],
+      "profile": "software_specification"
+    },
+    {
+      "id": "constraint.candidate_4",
+      "kind": "constraint",
+      "title": "Candidate Constraint",
+      "summary": "Candidate constraint object proposed from seed seed.notification_api_spec.",
+      "readiness": "draft",
+      "evidence": [],
+      "profile": "software_specification"
+    },
+    {
+      "id": "risk.candidate_5",
+      "kind": "risk",
+      "title": "Candidate Risk",
+      "summary": "Candidate risk object proposed from seed seed.notification_api_spec.",
+      "readiness": "draft",
+      "evidence": [],
+      "profile": "software_specification"
+    },
+    {
+      "id": "component.candidate_6",
+      "kind": "component",
+      "title": "Candidate Component",
+      "summary": "Candidate component object proposed from seed seed.notification_api_spec.",
+      "readiness": "draft",
+      "evidence": [],
+      "profile": "software_specification"
+    },
+    {
+      "id": "task.candidate_7",
+      "kind": "task",
+      "title": "Candidate Task",
+      "summary": "Candidate task object proposed from seed seed.notification_api_spec.",
+      "readiness": "draft",
+      "evidence": [],
+      "profile": "software_specification"
+    },
+    {
+      "id": "decision.candidate_8",
+      "kind": "decision",
+      "title": "Candidate Decision",
+      "summary": "Candidate decision object proposed from seed seed.notification_api_spec.",
+      "readiness": "draft",
+      "evidence": [],
+      "profile": "software_specification"
+    }
+  ],
+  "candidate_relations": [],
+  "uncertain_items": [
+    "This is a deterministic seed preview, not extracted canonical graph state."
+  ],
+  "review_questions": [
+    "Do the candidate object families match the graph purpose?",
+    "Are source boundaries sufficient for the first extraction pass?",
+    "Should canonical write remain blocked until human review?"
+  ],
+  "stop_conditions_triggered": []
+}
