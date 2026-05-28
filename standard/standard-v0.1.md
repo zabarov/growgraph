@@ -67,6 +67,9 @@ The public standard is expected to contain:
 
 - [Object Model](object-model.md)
 - [Relation Model](relation-model.md)
+- [Graph DNA](graph-dna.md)
+- [Graph Seed](graph-seed.md)
+- [Graph Embryo](graph-embryo.md)
 - [Lifecycle And Readiness](lifecycle-readiness.md)
 - [Evidence And Provenance](evidence-provenance.md)
 - `context-pack-generation.md`
@@ -108,14 +111,14 @@ Reason:
 
 The repository now contains the public foundation, terminology, initial object
 model, initial relation model, lifecycle/readiness, evidence/provenance,
-context-pack generation, profiles, governance, conformance levels, test-suite
-direction, initial schemas, a validator, a minimal example and a synthetic
-benchmark.
+graph DNA, graph seed, graph embryo, context-pack generation, profiles,
+governance, conformance levels, test-suite direction, initial schemas, a
+validator, a minimal example and a synthetic benchmark.
 
 Next required sections:
 
-1. stricter context-pack schema;
-2. profile manifest schema;
-3. implementation guide;
+1. CLI seed preview and embryo generation;
+2. stricter context-pack schema;
+3. profile manifest schema;
 4. richer negative fixtures;
 5. independent implementation pilot.

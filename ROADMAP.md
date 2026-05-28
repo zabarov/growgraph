@@ -109,8 +109,8 @@ Planned artifacts:
 ## Near-Term Work
 
 1. Map practical `$graph` capabilities to public GrowGraph standard sections.
-2. Draft graph DNA, graph seed and graph embryo public methods.
-3. Add graph seed and graph embryo schemas.
-4. Extend CLI with seed validation and readiness scoring.
-5. Add measure-convert-optimize benchmark protocol.
-6. Add profile manifests and negative fixtures.
+2. Add CLI seed preview and graph embryo generation.
+3. Add readiness scoring.
+4. Add measure-convert-optimize benchmark protocol.
+5. Add profile manifests and negative fixtures.
+6. Add independent implementation pilot plan.

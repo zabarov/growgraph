@@ -59,7 +59,9 @@ const gateVerdicts = new Set([
 ]);
 
 function usage() {
-  console.error("Usage: node packages/cli/validate-growgraph.js <package-dir>");
+  console.error("Usage:");
+  console.error("  node packages/cli/validate-growgraph.js <package-dir>");
+  console.error("  node packages/cli/validate-growgraph.js seed <seed-file>");
 }
 
 function readJson(filePath) {
@@ -269,16 +271,99 @@ function validatePackage(packageDir) {
   return { errors, warnings };
 }
 
-const packageDir = process.argv[2];
-if (!packageDir) {
+function requireObject(item, field, label, errors) {
+  if (!item[field] || typeof item[field] !== "object" || Array.isArray(item[field])) {
+    errors.push(`${label}.${field} must be an object`);
+  }
+}
+
+function validateSeed(seedPath) {
+  const errors = [];
+  const warnings = [];
+  const seed = readJson(seedPath);
+  const label = "seed";
+
+  requireString(seed, "schema_version", label, errors);
+  requireString(seed, "seed_id", label, errors);
+  requireString(seed, "target_graph_id", label, errors);
+  requireString(seed, "purpose", label, errors);
+  requireString(seed, "target_profile", label, errors);
+  requireString(seed, "target_mode", label, errors);
+  requireObject(seed, "graph_dna", label, errors);
+  requireObject(seed, "source_boundaries", label, errors);
+  requireObject(seed, "growth_rules", label, errors);
+  requireArray(seed, "review_gates", label, errors);
+  requireArray(seed, "generated_views", label, errors);
+  requireArray(seed, "stop_conditions", label, errors);
+
+  const targetModes = new Set([
+    "discovery",
+    "canonical",
+    "pilot",
+    "controlled_runtime",
+    "production_runtime"
+  ]);
+
+  if (typeof seed.target_mode === "string" && !targetModes.has(seed.target_mode)) {
+    errors.push(`${label}.target_mode has unsupported value ${seed.target_mode}`);
+  }
+
+  if (seed.graph_dna && typeof seed.graph_dna === "object") {
+    requireString(seed.graph_dna, "purpose", "seed.graph_dna", errors);
+    requireString(seed.graph_dna, "evolution_vector", "seed.graph_dna", errors);
+    requireArray(seed.graph_dna, "non_negotiable_principles", "seed.graph_dna", errors);
+  }
+
+  if (seed.source_boundaries && typeof seed.source_boundaries === "object") {
+    requireArray(seed.source_boundaries, "allowed_sources", "seed.source_boundaries", errors);
+    requireArray(seed.source_boundaries, "excluded_sources", "seed.source_boundaries", errors);
+    if (typeof seed.source_boundaries.canonical_write_allowed !== "boolean") {
+      errors.push("seed.source_boundaries.canonical_write_allowed must be a boolean");
+    }
+  }
+
+  if (seed.growth_rules && typeof seed.growth_rules === "object") {
+    requireArray(seed.growth_rules, "allowed_object_families", "seed.growth_rules", errors);
+    requireArray(seed.growth_rules, "allowed_relation_families", "seed.growth_rules", errors);
+    if (!Number.isInteger(seed.growth_rules.max_initial_objects) || seed.growth_rules.max_initial_objects < 1) {
+      errors.push("seed.growth_rules.max_initial_objects must be a positive integer");
+    }
+    if (!["light", "standard", "broad"].includes(seed.growth_rules.depth_mode)) {
+      errors.push("seed.growth_rules.depth_mode must be light, standard or broad");
+    }
+  }
+
+  if (
+    seed.source_boundaries &&
+    seed.source_boundaries.canonical_write_allowed === true &&
+    Array.isArray(seed.review_gates) &&
+    !seed.review_gates.includes("human_review_before_canonical_write")
+  ) {
+    warnings.push("canonical_write_allowed is true without human_review_before_canonical_write gate");
+  }
+
+  return { errors, warnings };
+}
+
+const modeOrPackageDir = process.argv[2];
+if (!modeOrPackageDir) {
   usage();
   process.exit(2);
 }
 
 try {
-  const result = validatePackage(path.resolve(packageDir));
+  const isSeedMode = modeOrPackageDir === "seed";
+  const targetPath = isSeedMode ? process.argv[3] : modeOrPackageDir;
+  if (!targetPath) {
+    usage();
+    process.exit(2);
+  }
+  const result = isSeedMode
+    ? validateSeed(path.resolve(targetPath))
+    : validatePackage(path.resolve(targetPath));
   const output = {
-    package_dir: path.resolve(packageDir),
+    mode: isSeedMode ? "seed" : "package",
+    target: path.resolve(targetPath),
     valid: result.errors.length === 0,
     errors: result.errors,
     warnings: result.warnings

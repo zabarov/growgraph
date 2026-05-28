@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://growgraph.dev/schemas/graph-embryo.schema.json",
+  "title": "GrowGraph Embryo",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "embryo_id",
+    "seed_id",
+    "generated_at",
+    "candidate_objects",
+    "candidate_relations",
+    "uncertain_items",
+    "review_questions",
+    "stop_conditions_triggered"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "embryo_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "seed_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_objects": {
+      "type": "array"
+    },
+    "candidate_relations": {
+      "type": "array"
+    },
+    "uncertain_items": {
+      "type": "array"
+    },
+    "review_questions": {
+      "type": "array"
+    },
+    "stop_conditions_triggered": {
+      "type": "array"
+    }
+  }
+}

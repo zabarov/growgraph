@@ -1,0 +1,60 @@
+{
+  "schema_version": "0.1.0",
+  "seed_id": "seed.demo_project",
+  "target_graph_id": "graph.demo_project",
+  "purpose": "Create a small graph for managing project growth.",
+  "target_profile": "profile.project_management",
+  "target_mode": "discovery",
+  "graph_dna": {
+    "purpose": "Keep project goals, decisions, risks and next actions connected.",
+    "evolution_vector": "Grow from a small project map into reviewed canonical project state.",
+    "non_negotiable_principles": [
+      "Generated candidates do not become canonical without review.",
+      "Private source material must not be published."
+    ]
+  },
+  "source_boundaries": {
+    "allowed_sources": [
+      "public_project_brief.md",
+      "synthetic_notes.md"
+    ],
+    "excluded_sources": [
+      "private_chats",
+      "secrets",
+      "customer_data"
+    ],
+    "canonical_write_allowed": false
+  },
+  "growth_rules": {
+    "allowed_object_families": [
+      "goal",
+      "task",
+      "decision",
+      "risk",
+      "evidence"
+    ],
+    "allowed_relation_families": [
+      "depends_on",
+      "blocks",
+      "supports",
+      "evidences"
+    ],
+    "max_initial_objects": 10,
+    "depth_mode": "light"
+  },
+  "review_gates": [
+    "human_review_before_canonical_write",
+    "validate_before_generated_context"
+  ],
+  "generated_views": [
+    "seed_summary",
+    "candidate_object_list",
+    "candidate_relation_list",
+    "growth_gap_report"
+  ],
+  "stop_conditions": [
+    "source_boundary_unclear",
+    "candidate_count_exceeds_budget",
+    "canonical_write_requested_before_review"
+  ]
+}

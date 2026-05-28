@@ -68,6 +68,7 @@ publications/ Publication links, citation notes and reproducibility records.
 - [Practice And Science Program](docs/research/practice-science-program.md)
 - [Standard Gap Report](docs/transfer/standard-gap-report-2026-05-28.md)
 - [Standard v0.1 Draft](standard/standard-v0.1.md)
+- [Graph Seed](standard/graph-seed.md)
 - [Conformance Levels](standard/conformance-levels.md)
 - [Test Suite](standard/test-suite.md)
 - [Synthetic Context-Reduction Benchmark](benchmarks/synthetic-context-reduction-v0/README.md)
@@ -81,6 +82,7 @@ Run the initial validator:
 ```bash
 node packages/cli/validate-growgraph.js examples/minimal-graph
 node packages/cli/validate-growgraph.js benchmarks/synthetic-context-reduction-v0
+node packages/cli/validate-growgraph.js seed examples/graph-seed-minimal/graph-seed.json
 ```
 
 Or run the current smoke checks:

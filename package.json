@@ -8,8 +8,9 @@
   "scripts": {
     "validate:minimal": "node packages/cli/validate-growgraph.js examples/minimal-graph",
     "validate:benchmark": "node packages/cli/validate-growgraph.js benchmarks/synthetic-context-reduction-v0",
+    "validate:seed": "node packages/cli/validate-growgraph.js seed examples/graph-seed-minimal/graph-seed.json",
     "benchmark:synthetic": "node benchmarks/synthetic-context-reduction-v0/scripts/calculate-context-reduction.js",
-    "test": "npm run validate:minimal && npm run validate:benchmark && npm run benchmark:synthetic"
+    "test": "npm run validate:minimal && npm run validate:benchmark && npm run validate:seed && npm run benchmark:synthetic"
   },
   "repository": {
     "type": "git",

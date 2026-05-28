@@ -35,6 +35,9 @@ All notable changes to GrowGraph will be documented in this file.
 - Initial `$graph` skill to GrowGraph transfer map.
 - Initial standard gap report comparing practical `$graph` methodology with
   public GrowGraph.
+- Public graph DNA, graph seed and graph embryo standard sections.
+- Graph seed and graph embryo schemas.
+- Minimal graph seed example.
 
 ### Validation
 
