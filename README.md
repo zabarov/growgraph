@@ -65,6 +65,7 @@ publications/ Publication links, citation notes and reproducibility records.
 - [Concept](docs/concept.md)
 - [Terminology](docs/terminology.md)
 - [Getting Started](docs/adoption/getting-started.md)
+- [Seed To Validated Package Tutorial](docs/adoption/seed-to-validated-package.md)
 - [Practice And Science Program](docs/research/practice-science-program.md)
 - [Standard Gap Report](docs/transfer/standard-gap-report-2026-05-28.md)
 - [Standard v0.1 Draft](standard/standard-v0.1.md)
@@ -74,6 +75,7 @@ publications/ Publication links, citation notes and reproducibility records.
 - [Synthetic Context-Reduction Benchmark](benchmarks/synthetic-context-reduction-v0/README.md)
 - [Benchmark Result](benchmarks/synthetic-context-reduction-v0/RESULT.md)
 - [Minimal Graph Example](examples/minimal-graph/README.md)
+- [Independent Implementation Pilot 001](pilots/independent-implementation-001-conference-planning/reports/pilot-report.md)
 - [Profiles](profiles/README.md)
 
 ## Validate A Graph Package

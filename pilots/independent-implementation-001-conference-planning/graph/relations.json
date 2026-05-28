@@ -1,0 +1,56 @@
+[
+  {
+    "id": "relation.system.community_conference.supports.goal.publish_reliable_schedule",
+    "type": "supports",
+    "source": "system.community_conference",
+    "target": "goal.publish_reliable_schedule",
+    "readiness": "review_ready",
+    "evidence": ["source.conference_brief"],
+    "profile": "project_management"
+  },
+  {
+    "id": "relation.task.collect_session_proposals.supports.goal.publish_reliable_schedule",
+    "type": "supports",
+    "source": "task.collect_session_proposals",
+    "target": "goal.publish_reliable_schedule",
+    "readiness": "review_ready",
+    "evidence": ["source.conference_brief"],
+    "profile": "project_management"
+  },
+  {
+    "id": "relation.task.confirm_room_capacity.blocks.risk.session_room_mismatch",
+    "type": "blocks",
+    "source": "task.confirm_room_capacity",
+    "target": "risk.session_room_mismatch",
+    "readiness": "review_ready",
+    "evidence": ["source.conference_brief"],
+    "profile": "project_management"
+  },
+  {
+    "id": "relation.risk.session_room_mismatch.blocks.goal.publish_reliable_schedule",
+    "type": "blocks",
+    "source": "risk.session_room_mismatch",
+    "target": "goal.publish_reliable_schedule",
+    "readiness": "review_ready",
+    "evidence": ["source.conference_brief"],
+    "profile": "project_management"
+  },
+  {
+    "id": "relation.gate.owner_schedule_approval.governs.decision.schedule_publish_gate",
+    "type": "governs",
+    "source": "gate.owner_schedule_approval",
+    "target": "decision.schedule_publish_gate",
+    "readiness": "accepted",
+    "evidence": ["source.conference_brief"],
+    "profile": "project_management"
+  },
+  {
+    "id": "relation.decision.schedule_publish_gate.depends_on.task.confirm_room_capacity",
+    "type": "depends_on",
+    "source": "decision.schedule_publish_gate",
+    "target": "task.confirm_room_capacity",
+    "readiness": "draft",
+    "evidence": ["source.conference_brief"],
+    "profile": "project_management"
+  }
+]

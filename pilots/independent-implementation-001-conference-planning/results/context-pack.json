@@ -1,0 +1,35 @@
+{
+  "id": "context_pack.task_prepare_speaker_schedule",
+  "task_id": "task.prepare_speaker_schedule",
+  "source_graph": "package.conference_planning_pilot_001",
+  "generated_at": "2026-05-28T17:54:11.386Z",
+  "included_objects": [
+    "source.conference_brief",
+    "system.community_conference",
+    "goal.publish_reliable_schedule",
+    "task.collect_session_proposals",
+    "task.confirm_room_capacity",
+    "decision.schedule_publish_gate",
+    "risk.session_room_mismatch",
+    "gate.owner_schedule_approval"
+  ],
+  "included_relations": [
+    "relation.system.community_conference.supports.goal.publish_reliable_schedule",
+    "relation.task.collect_session_proposals.supports.goal.publish_reliable_schedule",
+    "relation.task.confirm_room_capacity.blocks.risk.session_room_mismatch",
+    "relation.risk.session_room_mismatch.blocks.goal.publish_reliable_schedule",
+    "relation.gate.owner_schedule_approval.governs.decision.schedule_publish_gate",
+    "relation.decision.schedule_publish_gate.depends_on.task.confirm_room_capacity"
+  ],
+  "evidence": [
+    "source.conference_brief"
+  ],
+  "assumptions": [
+    "Alpha generator includes the full package graph; task-specific selection is not implemented yet."
+  ],
+  "omissions": [],
+  "limitations": [
+    "Generated context pack is not canonical state.",
+    "This alpha generator does not score relevance or semantic completeness."
+  ]
+}

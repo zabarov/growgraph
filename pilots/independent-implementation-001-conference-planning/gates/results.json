@@ -1,0 +1,12 @@
+[
+  {
+    "id": "gate_result.conference_planning.public_safety",
+    "gate_id": "gate.public_safety",
+    "target_id": "package.conference_planning_pilot_001",
+    "verdict": "pass",
+    "summary": "The pilot uses synthetic public-safe conference planning material only.",
+    "evidence": ["source.conference_brief"],
+    "reviewed_at": "2026-05-28",
+    "reviewer": "GrowGraph maintainers"
+  }
+]

@@ -50,6 +50,9 @@ All notable changes to GrowGraph will be documented in this file.
 - Independent implementation pilot plan.
 - Semantic completeness review protocol.
 - Release check script.
+- Independent implementation pilot 001 for a synthetic conference planning
+  workflow.
+- Worked tutorial from graph seed to validated package.
 
 ### Validation
 

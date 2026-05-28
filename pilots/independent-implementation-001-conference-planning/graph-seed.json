@@ -1,0 +1,65 @@
+{
+  "schema_version": "0.1.0",
+  "seed_id": "seed.conference_planning",
+  "target_graph_id": "graph.conference_planning",
+  "purpose": "Create a GrowGraph package for managing a small public conference planning workflow.",
+  "target_profile": "profile.project_management",
+  "target_mode": "pilot",
+  "graph_dna": {
+    "purpose": "Keep conference goals, planning tasks, decisions, risks and governance checks connected.",
+    "evolution_vector": "Grow from a small planning map into a reviewed conference operations graph.",
+    "non_negotiable_principles": [
+      "The package must remain synthetic and public-safe.",
+      "Schedule decisions require owner review before they are treated as accepted."
+    ]
+  },
+  "source_boundaries": {
+    "allowed_sources": [
+      "synthetic conference planning brief",
+      "synthetic organizer notes"
+    ],
+    "excluded_sources": [
+      "real attendee data",
+      "private sponsor contracts",
+      "personal speaker contact details"
+    ],
+    "canonical_write_allowed": false
+  },
+  "growth_rules": {
+    "allowed_object_families": [
+      "system",
+      "goal",
+      "task",
+      "decision",
+      "risk",
+      "evidence",
+      "governance_gate"
+    ],
+    "allowed_relation_families": [
+      "depends_on",
+      "blocks",
+      "supports",
+      "evidences",
+      "governs",
+      "belongs_to"
+    ],
+    "max_initial_objects": 12,
+    "depth_mode": "light"
+  },
+  "review_gates": [
+    "human_review_before_canonical_write",
+    "public_safety_before_release",
+    "owner_approval_before_schedule_publish"
+  ],
+  "generated_views": [
+    "seed_summary",
+    "candidate_object_list",
+    "risk_view",
+    "next_action_view"
+  ],
+  "stop_conditions": [
+    "real_personal_data_requested",
+    "schedule_publish_requested_before_owner_approval",
+    "candidate_count_exceeds_budget"
+  ]
+}

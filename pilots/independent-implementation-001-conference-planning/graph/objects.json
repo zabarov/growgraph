@@ -1,0 +1,74 @@
+[
+  {
+    "id": "source.conference_brief",
+    "kind": "evidence",
+    "title": "Synthetic conference brief",
+    "summary": "A public-safe synthetic brief for a one-day community conference.",
+    "readiness": "accepted",
+    "evidence": [],
+    "profile": "project_management"
+  },
+  {
+    "id": "system.community_conference",
+    "kind": "system",
+    "title": "Community Conference",
+    "summary": "A synthetic one-day conference planning workflow.",
+    "readiness": "review_ready",
+    "evidence": ["source.conference_brief"],
+    "profile": "project_management"
+  },
+  {
+    "id": "goal.publish_reliable_schedule",
+    "kind": "goal",
+    "title": "Publish reliable schedule",
+    "summary": "Prepare and publish a reliable speaker schedule for the conference.",
+    "readiness": "review_ready",
+    "evidence": ["source.conference_brief"],
+    "profile": "project_management"
+  },
+  {
+    "id": "task.collect_session_proposals",
+    "kind": "task",
+    "title": "Collect session proposals",
+    "summary": "Collect proposed talks and workshops before schedule planning.",
+    "readiness": "review_ready",
+    "evidence": ["source.conference_brief"],
+    "profile": "project_management"
+  },
+  {
+    "id": "task.confirm_room_capacity",
+    "kind": "task",
+    "title": "Confirm room capacity",
+    "summary": "Confirm available room capacity before assigning sessions.",
+    "readiness": "review_ready",
+    "evidence": ["source.conference_brief"],
+    "profile": "project_management"
+  },
+  {
+    "id": "decision.schedule_publish_gate",
+    "kind": "decision",
+    "title": "Schedule publish gate",
+    "summary": "The schedule may be published only after owner review.",
+    "readiness": "draft",
+    "evidence": ["source.conference_brief"],
+    "profile": "project_management"
+  },
+  {
+    "id": "risk.session_room_mismatch",
+    "kind": "risk",
+    "title": "Session room mismatch",
+    "summary": "A popular session may be assigned to a room that is too small.",
+    "readiness": "review_ready",
+    "evidence": ["source.conference_brief"],
+    "profile": "project_management"
+  },
+  {
+    "id": "gate.owner_schedule_approval",
+    "kind": "governance_gate",
+    "title": "Owner schedule approval",
+    "summary": "Owner approval is required before schedule publication.",
+    "readiness": "accepted",
+    "evidence": ["source.conference_brief"],
+    "profile": "project_management"
+  }
+]

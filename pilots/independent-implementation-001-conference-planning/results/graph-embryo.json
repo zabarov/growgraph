@@ -1,0 +1,81 @@
+{
+  "schema_version": "0.1.0",
+  "embryo_id": "embryo.conference_planning",
+  "seed_id": "seed.conference_planning",
+  "generated_at": "2026-05-28T17:54:11.318Z",
+  "candidate_objects": [
+    {
+      "id": "system.candidate_1",
+      "kind": "system",
+      "title": "Candidate System",
+      "summary": "Candidate system object proposed from seed seed.conference_planning.",
+      "readiness": "draft",
+      "evidence": [],
+      "profile": "project_management"
+    },
+    {
+      "id": "goal.candidate_2",
+      "kind": "goal",
+      "title": "Candidate Goal",
+      "summary": "Candidate goal object proposed from seed seed.conference_planning.",
+      "readiness": "draft",
+      "evidence": [],
+      "profile": "project_management"
+    },
+    {
+      "id": "task.candidate_3",
+      "kind": "task",
+      "title": "Candidate Task",
+      "summary": "Candidate task object proposed from seed seed.conference_planning.",
+      "readiness": "draft",
+      "evidence": [],
+      "profile": "project_management"
+    },
+    {
+      "id": "decision.candidate_4",
+      "kind": "decision",
+      "title": "Candidate Decision",
+      "summary": "Candidate decision object proposed from seed seed.conference_planning.",
+      "readiness": "draft",
+      "evidence": [],
+      "profile": "project_management"
+    },
+    {
+      "id": "risk.candidate_5",
+      "kind": "risk",
+      "title": "Candidate Risk",
+      "summary": "Candidate risk object proposed from seed seed.conference_planning.",
+      "readiness": "draft",
+      "evidence": [],
+      "profile": "project_management"
+    },
+    {
+      "id": "evidence.candidate_6",
+      "kind": "evidence",
+      "title": "Candidate Evidence",
+      "summary": "Candidate evidence object proposed from seed seed.conference_planning.",
+      "readiness": "draft",
+      "evidence": [],
+      "profile": "project_management"
+    },
+    {
+      "id": "governance_gate.candidate_7",
+      "kind": "governance_gate",
+      "title": "Candidate Governance Gate",
+      "summary": "Candidate governance_gate object proposed from seed seed.conference_planning.",
+      "readiness": "draft",
+      "evidence": [],
+      "profile": "project_management"
+    }
+  ],
+  "candidate_relations": [],
+  "uncertain_items": [
+    "This is a deterministic seed preview, not extracted canonical graph state."
+  ],
+  "review_questions": [
+    "Do the candidate object families match the graph purpose?",
+    "Are source boundaries sufficient for the first extraction pass?",
+    "Should canonical write remain blocked until human review?"
+  ],
+  "stop_conditions_triggered": []
+}
