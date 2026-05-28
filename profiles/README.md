@@ -9,3 +9,6 @@ Current public profiles:
 
 Each profile declares allowed object kinds, relation types, default readiness
 and governance gates.
+
+Executable profile examples and anti-examples are documented in
+[Profile Conformance Fixtures](../docs/adoption/profile-conformance-fixtures.md).

@@ -17,6 +17,7 @@ All notable changes to GrowGraph will be documented in this file.
 - Initial semantic-completeness review artifacts for the synthetic benchmark
   and software-specification pilot context packs.
 - Safety-context inclusion policy for context-pack generation.
+- Profile conformance fixture guide.
 
 ### Research Notes
 

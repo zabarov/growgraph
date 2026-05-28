@@ -22,7 +22,13 @@ Current checks:
 
 - validate minimal graph package;
 - validate synthetic benchmark graph package;
-- run synthetic context-reduction calculation.
+- validate public profile manifests;
+- validate public pilot packages;
+- run deterministic seed preview;
+- generate benchmark context pack;
+- score benchmark readiness;
+- run synthetic context-reduction calculation;
+- reject negative fixtures.
 
 ## Structural Validation
 
@@ -37,6 +43,20 @@ Structural validation checks:
 - evidence arrays;
 - optional package manifest;
 - optional gate result records.
+
+## Profile Conformance
+
+Profile conformance checks:
+
+- package object kinds are allowed by `manifest.profile`;
+- package relation types are allowed by `manifest.profile`;
+- relation ids agree with source, type and target fields.
+
+Fixture guide:
+
+```text
+docs/adoption/profile-conformance-fixtures.md
+```
 
 Current validator:
 
@@ -67,11 +87,9 @@ Planned:
 
 - context-pack metadata validation;
 - context-pack evidence preservation;
-- negative examples;
-- profile conformance fixtures;
 - governance gate result validation;
 - package manifest validation;
-- semantic completeness review fixture;
+- semantic completeness review fixture validation;
 - cross-package import/export tests.
 
 ## Test Result Policy
