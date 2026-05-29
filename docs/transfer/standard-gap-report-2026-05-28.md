@@ -4,6 +4,11 @@ Date: 2026-05-28
 
 Status: initial public-safe comparison
 
+Historical note:
+
+This report is retained as the initial transfer baseline. The current public
+capability map is `docs/transfer/graph-capability-map-2026-05-29.md`.
+
 ## Purpose
 
 This report compares the practical `$graph` skill methodology with the public

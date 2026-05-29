@@ -119,3 +119,10 @@ Examples:
 Current gap report:
 
 `docs/transfer/standard-gap-report-2026-05-28.md`
+
+Current capability map:
+
+`docs/transfer/graph-capability-map-2026-05-29.md`
+
+The dated capability map is the current public-safe transfer state. The
+2026-05-28 gap report is retained as a historical baseline.
